@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebApiClient.Models.Bus>
+
+@{
+    ViewData["Title"] = "IndexBus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<center>
+    <h4>Available Buses</h4>
+</center>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.source)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dept_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arrival_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bus_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.source)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dept_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.arrival_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bus_no)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<WebApiClient.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h4>Booked Tickets</h4>
+</center>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.c_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.c_to)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.c_from)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dept_time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.arrival_time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.total_seat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.seat_num)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.status)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.c_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.c_to)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.c_from)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dept_time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.arrival_time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.total_seat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.seat_num)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

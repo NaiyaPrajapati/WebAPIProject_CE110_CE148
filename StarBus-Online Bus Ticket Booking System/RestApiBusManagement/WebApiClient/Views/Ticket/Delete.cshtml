@@ -1,0 +1,88 @@
+﻿@model WebApiClient.Models.Ticket
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4>Delete Ticket</h4>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.c_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.c_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.c_to)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.c_to)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.c_from)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.c_from)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dept_time)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dept_time)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.arrival_time)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.arrival_time)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.total_seat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.total_seat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.seat_num)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.seat_num)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

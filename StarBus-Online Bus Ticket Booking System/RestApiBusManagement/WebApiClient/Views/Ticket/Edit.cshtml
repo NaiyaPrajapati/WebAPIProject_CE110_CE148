@@ -1,0 +1,84 @@
+﻿@model WebApiClient.Models.Ticket
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<center>
+    <h4>Update Ticket</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="id" class="control-label"></label>
+                    <input asp-for="id" class="form-control" />
+                    <span asp-validation-for="id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="c_name" class="control-label"></label>
+                    <input asp-for="c_name" class="form-control" />
+                    <span asp-validation-for="c_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="email" class="control-label"></label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="c_to" class="control-label"></label>
+                    <input asp-for="c_to" class="form-control" />
+                    <span asp-validation-for="c_to" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="c_from" class="control-label"></label>
+                    <input asp-for="c_from" class="form-control" />
+                    <span asp-validation-for="c_from" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dept_time" class="control-label"></label>
+                    <input asp-for="dept_time" class="form-control" />
+                    <span asp-validation-for="dept_time" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="arrival_time" class="control-label"></label>
+                    <input asp-for="arrival_time" class="form-control" />
+                    <span asp-validation-for="arrival_time" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="total_seat" class="control-label"></label>
+                    <input asp-for="total_seat" class="form-control" />
+                    <span asp-validation-for="total_seat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="seat_num" class="control-label"></label>
+                    <input asp-for="seat_num" class="form-control" />
+                    <span asp-validation-for="seat_num" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="amount" class="control-label"></label>
+                    <input asp-for="amount" class="form-control" />
+                    <span asp-validation-for="amount" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="status" /> @Html.DisplayNameFor(model => model.status)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</center>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
